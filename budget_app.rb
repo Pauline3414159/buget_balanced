@@ -12,9 +12,8 @@ before do
 end
 
 get '/' do
-
   @needs = (@income * 0.5)
-  @wants =  (@income * 0.3)
+  @wants = (@income * 0.3)
   @savings = (@income * 0.2)
   @needs_values_total = @needs_hash.values.sum
   @wants_values_total = @wants_hash.values.sum
@@ -62,45 +61,39 @@ end
 
 # Editing needs:
 post '/edit_needs/:category' do
-  # binding.pry
-  # params
   session['needs_hash'][params['category']] = params['new_val'].to_i
   redirect '/'
 end
 
 # Editing wants:
 post '/edit_wants/:category' do
-  # binding.pry
-  # params
   session['wants_hash'][params['category']] = params['new_val'].to_i
   redirect '/'
 end
 
 # Editing needs:
 post '/edit_savings/:category' do
-  # binding.pry
-  # params
   session['savings_hash'][params['category']] = params['new_val'].to_i
   redirect '/'
 end
 
 # Deleting from needs:
 post '/delete_needs' do
-  #binding.pry
+  # binding.pry
   session['needs_hash'].delete(params['category'])
   redirect '/'
 end
 
 # Deleting from wants:
 post '/delete_wants' do
-  #binding.pry
+  # binding.pry
   session['wants_hash'].delete(params['category'])
   redirect '/'
 end
 
 # Deleting from savings:
 post '/delete_savings' do
-  #binding.pry
+  # binding.pry
   session['savings_hash'].delete(params['category'])
   redirect '/'
 end
