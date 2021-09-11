@@ -67,7 +67,7 @@
   <ol>
     <% @savings_hash.each do |category, amount| %>
       <li> <%= category%> : $<%= amount%>
-        <form action="/edit_wants/<%= category %>" method="post"> <label for="new_val"></label> <input type="number" name="new_val" id="new_val"> <button>save new value</button></form>
+        <form action="/edit_savings/<%= category %>" method="post"> <label for="new_val"></label> <input type="number" name="new_val" id="new_val"> <button>save new value</button></form>
         <form action="/delete_savings" method="post"> <input type="hidden" name="category" value="<%= category %>"><button>Delete Saving </button></form>
       </li>
     <% end %>
