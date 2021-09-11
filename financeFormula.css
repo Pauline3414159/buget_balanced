@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+.row{
+	margin-left: 10em;
+	margin-right: 10em;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
+.columnHeading {
+	float: left;
+	width: 25%;
+	padding: 10px;
+	height: 300px;
+}
+
+.columnItem {
+	float: left;
+	width: 50%;
+
+	height: 300px;
+}
+
+.addItem{
+	padding: 10px;
+}
+
+.columnResult {
+	float: left;
+	width: 25%;
+	padding: 10px;
+	height: 300px;
+}
+
+.moneyFormula{
+	margin-left: 10em;
+}
+
+.description{
+	margin-left: 10em;
+}
+
+.incomeEntry{
+	margin: 3% 40% 5%;
+}
+
+.list{
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+  font-weight: bold;
+}
+
+.totalCategory{
+	font-weight: bold;
+}
+
+.itemAmountGroup{
+	float: left;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} 
