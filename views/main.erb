@@ -14,7 +14,7 @@
   </form>
   <ol>
     <% @needs_hash.each do |category, amount| %>
-      <li> <%= category%> : $<%= amount%> </li>
+      <li> <%= category%> : $<%= amount%> <form action="/edit_needs/<%= category %>" method="post"> <label for="new_val"></label> <input type="number" name="new_val" id="new_val"> <button>save new value</button></form> </li>
     <% end %>
   </ol>
   <p> Total Needs $<%= @needs_values_total %></p>
