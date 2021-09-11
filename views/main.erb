@@ -1,0 +1,17 @@
+<main>
+  <form action="/income" method="post">
+    <label for="income">Enter your monthly take home income</label>
+    <input type="number" name="income" id="income">
+    <button>submit</button>
+  </form>
+
+  <p> needs is <%= @needs %></p>
+  <form action="/" method="post">
+    <label for="new_category"> Enter a new Category Here</label>
+    <input type="text" name="new_category" id="new_category">
+    <input type="number" name="new_amount" id="amount">
+    <button>save category and amount</button>
+  </form>
+  <p> wants is <%= @wants %></p>
+  <p> savings or debt repayment  is <%= @savings %></p>
+</main>
