@@ -40,5 +40,11 @@ post '/edit_needs/:category' do
   redirect '/'
 end
 
+post '/delete_needs' do
+  #binding.pry
+  session['needs_hash'].delete(params['category'])
+  redirect '/'
+end
+
 # session {needs_hash: {housing: 300, ... }}
 # {income: input}
