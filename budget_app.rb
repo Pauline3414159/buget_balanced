@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'pry'
 
 enable :sessions
 
@@ -18,26 +19,6 @@ get '/' do
   @wants_values_total = @wants_hash.values.sum
   @savings_values_total = @savings_hash.values.sum
   erb :main
-end
-
-get '/home' do
-  redirect '/'
-end
-
-get '/why' do
-  erb :why
-end
-
-get '/how' do
-  erb :how
-end
-
-get '/about' do
-  erb :about
-end
-
-get '/credits' do
-  erb :credit
 end
 
 post '/income' do
