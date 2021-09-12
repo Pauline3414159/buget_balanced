@@ -1,4 +1,5 @@
 require 'sinatra'
+require "tilt/erubis"
 
 enable :sessions
 
