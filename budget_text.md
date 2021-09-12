@@ -44,6 +44,4 @@ The balanced money formula was created by [Elizabeth Warren](https://en.wikipedi
 ___
 The back end of the website was created with [Ruby](https://www.ruby-lang.org/en/) and [Sinatra](http://sinatrarb.com/).
 ___
-The front end of this website was created with [placeholders](www.weather.com).
-___
 This project was completed for [TechTogether Boston 2021](https://boston.techtogether.io/).

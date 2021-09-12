@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require 'pry'
 
 enable :sessions
 
@@ -21,6 +20,26 @@ get '/' do
   erb :main
 end
 
+get '/home' do
+  redirect '/'
+end
+
+get '/why' do
+  erb :why
+end
+
+get '/how' do
+  erb :how
+end
+
+get '/about' do
+  erb :about
+end
+
+get '/credits' do
+  erb :credit
+end
+
 post '/income' do
   session['income'] = params['income'].to_i
   redirect '/'
@@ -28,27 +47,21 @@ end
 
 # Adding to the needs:
 post '/new_needs' do
-  if session.key?('needs_hash') == false
-    session['needs_hash'] = {}
-  end
+  session['needs_hash'] = {} if session.key?('needs_hash') == false
   session['needs_hash'][params['new_category']] = params['new_amount'].to_i
   redirect '/'
 end
 
 # Adding to the wants:
 post '/new_wants' do
-  if session.key?('wants_hash') == false
-    session['wants_hash'] = {}
-  end
+  session['wants_hash'] = {} if session.key?('wants_hash') == false
   session['wants_hash'][params['new_category']] = params['new_amount'].to_i
   redirect '/'
 end
 
 # Adding to the savings:
 post '/new_savings' do
-  if session.key?('savings_hash') == false
-    session['savings_hash'] = {}
-  end
+  session['savings_hash'] = {} if session.key?('savings_hash') == false
   session['savings_hash'][params['new_category']] = params['new_amount'].to_i
   redirect '/'
 end
@@ -88,4 +101,3 @@ post '/delete_savings' do
   session['savings_hash'].delete(params['category'])
   redirect '/'
 end
-
